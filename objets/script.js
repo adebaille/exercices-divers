@@ -27,3 +27,14 @@ const userSettings = { theme: "dark", language: "en" };
 const merged = {...defaults, ...userSettings};
 
 console.log (merged);
+
+//Exercice 4
+//Utilise filter et map pour obtenir la liste des noms des utilisateurs actifs et majeurs (âge >= 18).
+const users = [
+  { name: "Alice", age: 25, isActive: true },
+  { name: "Bob", age: 17, isActive: false },
+  { name: "Charlie", age: 32, isActive: true },
+];
+
+const result = users.filter(u => u.age >= 18 && u.isActive).map((u => u.name));
+console.log(result);
