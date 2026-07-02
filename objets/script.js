@@ -11,3 +11,10 @@ console.log (`Titre ${book.title}`);
 console.log (`Autrice ${book.author}`);
 console.log (`Année de parution ${book.year}`);
 console.log (`A t'il été lu ? ${book.isRead}`);
+
+//Exercice 2
+//Déstructure name et price dans des variables séparées, puis affiche : "Clavier coûte 49€".
+const product = { name: "Clavier", price: 49, stock: 12 };
+const {name, price} = product;
+
+console.log(`${name} coûte ${price}€`);
