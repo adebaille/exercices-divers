@@ -18,3 +18,12 @@ const product = { name: "Clavier", price: 49, stock: 12 };
 const {name, price} = product;
 
 console.log(`${name} coûte ${price}€`);
+
+//Exercice 3
+//Fusionne-les avec le spread pour que les préférences de userSettings écrasent celles de defaults. Affiche le résultat.
+const defaults = { theme: "light", language: "fr", notifications: true };
+const userSettings = { theme: "dark", language: "en" };
+
+const merged = {...defaults, ...userSettings};
+
+console.log (merged);
