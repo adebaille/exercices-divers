@@ -8,5 +8,19 @@ function greet(name) {
 
     return `Bonjour, ${name} !`;
 }
-
 console.log(greet("Alison"));
+
+//Exercice 3
+//Prédit ce que ce code affiche avant de l'exécuter, et explique pourquoi :
+const message = "global";
+
+function foo() {
+  const message = "local";
+  console.log(message);
+}
+
+foo();
+console.log(message);
+
+/* Réponse : La variable message à l'intérieur de foo "masque" la variable globale du même nom, uniquement dans le scope de la fonction. Les deux coexistent sans se modifier.
+JS cherche toujours une variable du scope le plus proche vers le plus lointain. Dans foo, il trouve message localement, il s'arrête là et n'ira pas chercher le message global. */
