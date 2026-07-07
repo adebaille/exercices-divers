@@ -39,3 +39,25 @@ const triple = makeMultiplier(3);
 
 console.log(double(5));  // 10
 console.log(triple(5));  // 15
+
+//Exercice synthèse
+//Écris une fonction applyDiscount(rate) qui retourne une nouvelle fonction. Cette nouvelle fonction prend un produit et retourne un nouvel objet avec le même nom mais un prix réduit du pourcentage rate.
+//Utilise applyDiscount pour créer une fonction apply10 (10% de réduction). Utilise filter + map pour obtenir les produits en stock, avec 10% de réduction appliqué.
+const products = [
+  { name: "Clavier", price: 49, inStock: true },
+  { name: "Souris", price: 25, inStock: false },
+  { name: "Écran", price: 299, inStock: true },
+  { name: "Casque", price: 89, inStock: true },
+];
+
+function applyDiscount(rate) {
+
+    return function(product){
+        return { ...product, price: product.price * (1 - rate / 100) }
+    };
+}
+const apply10 = applyDiscount(10);
+
+const result = products.filter(p => p.inStock).map(p => apply10(p));
+
+console.log(result);
