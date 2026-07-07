@@ -10,8 +10,8 @@ console.log(sum(4));
 //Exercice 2
 //Écris une fonction récursive countdown(n) qui affiche les nombres de n jusqu'à 0.
 function countdown(n) {
-    if (n <=0) return;
+    if (n < 0) return;
     console.log(n);
     countdown(n - 1);
 }
-console.log(countdown(3));
+countdown(3);
